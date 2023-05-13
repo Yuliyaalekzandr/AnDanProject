@@ -46,7 +46,7 @@ for region in ('moscow', 'volgograd', 'voronezh', 'chita', 'irkutsk', 'kemerovo'
 
                     parse_data['fuel_type'].append(specs[1][:-1])
                     parse_data['transmission'].append(specs[2][:-1])
-                    parse_data['drive_mode'].append(specs[3])
+                    parse_data['drive_mode'].append(specs[3][:-1])
                     parse_data['price'].append(int(price.replace('\xa0', '')))
                     parse_data['mileage'].append(int(''.join([s for s in specs[4] if s.isdigit()])))
             except IndexError:
